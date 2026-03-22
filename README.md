@@ -110,4 +110,3 @@ NexusFlow Proprietary Freeware License
 Copyright © 2026 NexusFlow. All rights reserved.
 
 This software is free to use and distribute, but **may not be modified, reverse-engineered, decompiled, or sold**. See [LICENSE](LICENSE) for details.
-
