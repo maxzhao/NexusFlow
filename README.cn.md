@@ -12,7 +12,7 @@
 [![Platform](https://img.shields.io/badge/平台-Windows-0078D6?logo=windows)](https://github.com/maxzhao/NexusFlow/releases)
 [![UE](https://img.shields.io/badge/Unreal%20Engine-5.6--5.7-313131?logo=unrealengine)](https://www.unrealengine.com/)
 
-[下载最新版](https://github.com/maxzhao/NexusFlow/releases) · [使用文档](https://nexusflow-docs.pages.dev/zh/) · [问题反馈](https://github.com/maxzhao/NexusFlow/issues) · [English](README.md)
+[下载最新版](https://github.com/maxzhao/NexusFlow/releases) · [使用文档](https://nexusflow-docs.pages.dev) · [问题反馈](https://github.com/maxzhao/NexusFlow/issues) · [English](README.md)
 
 </div>
 
@@ -42,9 +42,9 @@ NexusFlow 是一款深度集成 Unreal Engine 编辑器的 AI 辅助开发工具
 
 ### ⚡ UE 编辑器深度集成
 
-- **右键快捷菜单** — 在蓝图编辑器中右键即可让 AI 解释、重构、修复
+- **UE 快速菜单** — 4 个入口、17 项 AI 操作，覆盖右键菜单和工具栏
 - **悬浮球快速入口** — 随时唤起 AI 对话
-- **侧边栏停靠** — 像原生面板一样嵌入编辑器
+- **侧边栏停靠** — 停靠到屏幕边缘（左/右），类似 VS Code 侧边栏，也支持浮动窗口模式
 
 ### 🔧 可扩展的 Skills 系统
 

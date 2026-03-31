@@ -12,7 +12,7 @@ Control UE Blueprints with natural language — understand, modify, and generate
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](https://github.com/maxzhao/NexusFlow/releases)
 [![UE](https://img.shields.io/badge/Unreal%20Engine-5.6--5.7-313131?logo=unrealengine)](https://www.unrealengine.com/)
 
-[Download Latest](https://github.com/maxzhao/NexusFlow/releases) · [Documentation](https://nexusflow-docs.pages.dev/en/) · [Report Issue](https://github.com/maxzhao/NexusFlow/issues) · [中文文档](README.cn.md)
+[Download Latest](https://github.com/maxzhao/NexusFlow/releases) · [Documentation](https://nexusflow-docs.pages.dev) · [Report Issue](https://github.com/maxzhao/NexusFlow/issues) · [中文](README.cn.md)
 
 </div>
 
@@ -42,9 +42,9 @@ Built-in RAG semantic search engine — the AI automatically searches node templ
 
 ### ⚡ Deep UE Editor Integration
 
-- **Right-click Quick Menu** — Right-click in the Blueprint Editor to let AI explain, refactor, or fix
+- **UE Quick Menu** — 4 entry points, 17 AI operations across right-click menus and toolbars
 - **Floating Ball** — Quick access to AI chat anytime
-- **Sidebar Docking** — Embeds into the editor like a native panel
+- **Sidebar Docking** — Dock to screen edge (left/right) like a VS Code sidebar, or use as a floating window
 
 ### 🔧 Extensible Skills System
 
