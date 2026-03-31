@@ -10,9 +10,9 @@
 
 [![License](https://img.shields.io/badge/许可证-Proprietary%20Freeware-blue)](#许可证)
 [![Platform](https://img.shields.io/badge/平台-Windows-0078D6?logo=windows)](https://github.com/maxzhao/NexusFlow/releases)
-[![UE](https://img.shields.io/badge/Unreal%20Engine-5.3--5.7-313131?logo=unrealengine)](https://www.unrealengine.com/)
+[![UE](https://img.shields.io/badge/Unreal%20Engine-5.6--5.7-313131?logo=unrealengine)](https://www.unrealengine.com/)
 
-[下载最新版](https://github.com/maxzhao/NexusFlow/releases) · [问题反馈](https://github.com/maxzhao/NexusFlow/issues) · [English](README.md)
+[下载最新版](https://github.com/maxzhao/NexusFlow/releases) · [使用文档](https://nexusflow-docs.pages.dev/zh/) · [问题反馈](https://github.com/maxzhao/NexusFlow/issues) · [English](README.md)
 
 </div>
 
@@ -57,15 +57,17 @@ NexusFlow 是一款深度集成 Unreal Engine 编辑器的 AI 辅助开发工具
 | 项目 | 要求 |
 |------|------|
 | 操作系统 | Windows 10/11 (64-bit) |
-| Unreal Engine | 5.3 ~ 5.7 |
-| LLM API | OpenAI / Anthropic / DeepSeek (需自备 API Key) |
+| Unreal Engine | 5.6 / 5.7 |
+| LLM API | OpenAI / Anthropic / Google Gemini / DeepSeek / 智谱 GLM / MiniMax / 通义千问 / Kimi（需自备 API Key） |
 
 ### 安装步骤
 
 1. **下载主程序** — 从 [Releases](https://github.com/maxzhao/NexusFlow/releases) 页面下载最新安装包
-2. **安装 UE 插件** — 首次启动主程序时，安装向导会引导你完成插件安装
+2. **安装 UE 插件** — 从 [Fab.com](https://www.fab.com/) 购买并安装（支持 UE 5.6 和 5.7）
 3. **配置 AI 模型** — 在设置中填入你的 LLM API Key
 4. **开始使用** — 打开 UE 项目，点击悬浮球或使用快捷键唤起 AI 对话
+
+> 📖 详细安装步骤请参阅[安装指南](https://nexusflow-docs.pages.dev/zh/guide/installation)。
 
 ## 🌍 多语言支持
 
@@ -86,16 +88,18 @@ NexusFlow 是一款深度集成 Unreal Engine 编辑器的 AI 辅助开发工具
 ## ❓ 常见问题
 
 **Q: 需要联网吗？**
-A: 需要。NexusFlow 需要调用 LLM API（OpenAI / Anthropic / DeepSeek）来提供 AI 能力，请确保网络畅通。
+A: 需要。NexusFlow 需要调用 LLM API 来提供 AI 能力，请确保网络畅通。
 
 **Q: 支持哪些 LLM？**
-A: 目前支持 OpenAI、Anthropic (Claude) 和 DeepSeek，需要自备 API Key。
+A: 内置支持 OpenAI、Anthropic (Claude)、Google Gemini、DeepSeek、智谱 GLM、MiniMax、通义千问 (Qwen) 和 Kimi (月之暗面)。还可以通过 Custom Provider 接入任何兼容 OpenAI/Anthropic/Gemini API 的服务。需要自备 API Key。
 
 **Q: 支持 macOS 吗？**
 A: 目前仅支持 Windows，macOS 支持计划在 Release 1.0 版本中提供。
 
 **Q: 会修改我的 UE 项目文件吗？**
 A: AI 对蓝图的操作基于 UE 原生的 Undo 系统 (FScopedTransaction)，所有修改都可以撤销。
+
+> 📖 更多问题？查看[常见问题](https://nexusflow-docs.pages.dev/zh/faq/)和[故障排除指南](https://nexusflow-docs.pages.dev/zh/faq/troubleshooting)。
 
 ## 📬 反馈与建议
 

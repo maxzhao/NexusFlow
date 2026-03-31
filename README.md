@@ -10,9 +10,9 @@ Control UE Blueprints with natural language — understand, modify, and generate
 
 [![License](https://img.shields.io/badge/License-Proprietary%20Freeware-blue)](#license)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](https://github.com/maxzhao/NexusFlow/releases)
-[![UE](https://img.shields.io/badge/Unreal%20Engine-5.3--5.7-313131?logo=unrealengine)](https://www.unrealengine.com/)
+[![UE](https://img.shields.io/badge/Unreal%20Engine-5.6--5.7-313131?logo=unrealengine)](https://www.unrealengine.com/)
 
-[Download Latest](https://github.com/maxzhao/NexusFlow/releases) · [Report Issue](https://github.com/maxzhao/NexusFlow/issues) · [中文文档](README.cn.md)
+[Download Latest](https://github.com/maxzhao/NexusFlow/releases) · [Documentation](https://nexusflow-docs.pages.dev/en/) · [Report Issue](https://github.com/maxzhao/NexusFlow/issues) · [中文文档](README.cn.md)
 
 </div>
 
@@ -57,15 +57,17 @@ Python-based capability packs covering Blueprints, assets, lighting, and more �
 | Requirement | Details |
 |-------------|---------|
 | OS | Windows 10/11 (64-bit) |
-| Unreal Engine | 5.3 – 5.7 |
-| LLM API | OpenAI / Anthropic / DeepSeek (bring your own API Key) |
+| Unreal Engine | 5.6 / 5.7 |
+| LLM API | OpenAI / Anthropic / Google Gemini / DeepSeek / Zhipu GLM / MiniMax / Qwen / Kimi (bring your own API Key) |
 
 ### Steps
 
-1. **Download** — Get the latest installer from [Releases](https://github.com/maxzhao/NexusFlow/releases)
-2. **Install UE Plugin** — The setup wizard will guide you through plugin installation on first launch
+1. **Download Desktop App** — Get the latest installer from [Releases](https://github.com/maxzhao/NexusFlow/releases)
+2. **Install UE Plugin** — Purchase and install from [Fab.com](https://www.fab.com/) (supports UE 5.6 and 5.7)
 3. **Configure AI Model** — Enter your LLM API Key in Settings
 4. **Start Using** — Open a UE project, click the floating ball or use the hotkey to start chatting
+
+> 📖 For detailed installation steps, see the [Installation Guide](https://nexusflow-docs.pages.dev/en/guide/installation).
 
 ## 🌍 Language Support
 
@@ -86,16 +88,18 @@ Currently in **Beta** — core features are functional, and we're actively impro
 ## ❓ FAQ
 
 **Q: Does it require internet?**
-A: Yes. NexusFlow calls LLM APIs (OpenAI / Anthropic / DeepSeek) to provide AI capabilities. A stable internet connection is required.
+A: Yes. NexusFlow calls LLM APIs to provide AI capabilities. A stable internet connection is required.
 
 **Q: Which LLMs are supported?**
-A: OpenAI, Anthropic (Claude), and DeepSeek. You need to provide your own API Key.
+A: Built-in support for OpenAI, Anthropic (Claude), Google Gemini, DeepSeek, Zhipu GLM, MiniMax, Qwen (Alibaba Cloud), and Kimi (Moonshot). You can also connect any OpenAI/Anthropic/Gemini-compatible API via Custom Provider. You need to provide your own API Key.
 
 **Q: Does it support macOS?**
 A: Currently Windows only. macOS support is planned for the Release 1.0 version.
 
 **Q: Will it modify my UE project files?**
 A: All Blueprint operations use UE's native Undo system (FScopedTransaction). Every change can be undone with Ctrl+Z.
+
+> 📖 More questions? Check the [FAQ](https://nexusflow-docs.pages.dev/en/faq/) and [Troubleshooting Guide](https://nexusflow-docs.pages.dev/en/faq/troubleshooting).
 
 ## 📬 Feedback
 
