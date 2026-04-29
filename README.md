@@ -54,11 +54,11 @@ Python-based capability packs covering Blueprints, assets, lighting, and more �
 
 ### System Requirements
 
-| Requirement | Details |
-|-------------|---------|
-| OS | Windows 10/11 (64-bit) |
-| Unreal Engine | 5.6 / 5.7 |
-| LLM API | OpenAI / Anthropic / Google Gemini / DeepSeek / Zhipu GLM / MiniMax / Qwen / Kimi (bring your own API Key) |
+| Requirement   | Details                                                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------------------------- |
+| OS            | Windows 10/11 (64-bit)                                                                                     |
+| Unreal Engine | 5.6 / 5.7                                                                                                  |
+| LLM API       | OpenAI / Anthropic / Google Gemini / DeepSeek / Zhipu GLM / MiniMax / Qwen / Kimi (bring your own API Key) |
 
 ### Steps
 
@@ -73,15 +73,15 @@ Python-based capability packs covering Blueprints, assets, lighting, and more �
 
 - 🇺🇸 English
 - 🇨🇳 简体中文
-- 🇹🇼 繁體中文
+- 🇨🇳 繁體中文
 
 ## 📋 Version Status
 
-| Phase | Version | Status |
-|-------|---------|--------|
-| MVP | 0.1.0 | ✅ Complete |
+| Phase    | Version   | Status                |
+| -------- | --------- | --------------------- |
+| MVP      | 0.1.0     | ✅ Complete           |
 | **Beta** | **0.5.0** | **🔄 In Development** |
-| Release | 1.0.0 | 📋 Planned |
+| Release  | 1.0.0     | 📋 Planned            |
 
 Currently in **Beta** — core features are functional, and we're actively improving the user experience.
 
