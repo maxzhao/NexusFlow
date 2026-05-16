@@ -12,7 +12,7 @@ Control UE Blueprints and UMG Widgets with natural language — from the NexusFl
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](https://github.com/maxzhao/NexusFlow/releases)
 [![UE](https://img.shields.io/badge/Unreal%20Engine-5.6--5.7-313131?logo=unrealengine)](https://www.unrealengine.com/)
 
-[Download Latest](https://github.com/maxzhao/NexusFlow/releases) · [Documentation](https://nexusflow-docs.pages.dev) · [Report Issue](https://github.com/maxzhao/NexusFlow/issues) · [中文](README.cn.md)
+[Download Latest](https://github.com/maxzhao/NexusFlow/releases) · [Documentation](https://maxzhao.github.io/NexusFlow/) · [Report Issue](https://github.com/maxzhao/NexusFlow/issues) · [中文](README.cn.md)
 
 </div>
 
@@ -85,12 +85,12 @@ The experimental Widget Skill can create UMG Widget Blueprints, read widget tree
 ### Steps
 
 1. **Download Desktop App** — Get the latest installer from [Releases](https://github.com/maxzhao/NexusFlow/releases)
-2. **Install UE Plugin** — Purchase and install from [Fab.com](https://www.fab.com/) (supports UE 5.6 and 5.7)
+2. **Install UE Plugin** — Purchase and install from the [Fab listing](https://www.fab.com/listings/52b02df5-ac06-46cf-99b5-fecc8296a858) (supports UE 5.6 and 5.7)
 3. **Configure AI Model** — Enter your LLM API Key in Settings, or reference one with `${OPENAI_API_KEY}`
 4. **Optional: Configure LLM Proxy** — In Settings → LLM Proxy, set a global HTTP/HTTPS/SOCKS proxy for LLM requests when your network requires it
 5. **Start Using** — Open a UE project, click the floating ball or use the hotkey to start chatting
 
-> 📖 For detailed installation steps, see the [Installation Guide](https://nexusflow-docs.pages.dev/en/guide/installation).
+> 📖 For detailed installation steps, see the [Installation Guide](https://maxzhao.github.io/NexusFlow/en/guide/installation).
 
 ## 🌍 Language Support
 
@@ -122,7 +122,7 @@ A: Currently Windows only. macOS support is planned for the Release 1.0 version.
 **Q: Will it modify my UE project files?**
 A: Blueprint operations use UE's native Undo system where supported. For destructive or full-rewrite actions, NexusFlow and the agent workflow ask for confirmation first.
 
-> 📖 More questions? Check the [FAQ](https://nexusflow-docs.pages.dev/en/faq/) and [Troubleshooting Guide](https://nexusflow-docs.pages.dev/en/faq/troubleshooting).
+> 📖 More questions? Check the [FAQ](https://maxzhao.github.io/NexusFlow/en/faq/) and [Troubleshooting Guide](https://maxzhao.github.io/NexusFlow/en/faq/troubleshooting).
 
 ## 📬 Feedback
 
