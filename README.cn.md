@@ -6,7 +6,7 @@
 
 **AI 驱动的 Unreal Engine 蓝图开发助手**
 
-用自然语言操控 UE 蓝图 — 理解、修改、生成，一句话搞定。
+用自然语言操控 UE 蓝图与 UMG Widget — 可在 NexusFlow 桌面端中使用，也可从支持 MCP 的 IDE 接入。
 
 [![License](https://img.shields.io/badge/许可证-Proprietary%20Freeware-blue)](#许可证)
 [![Platform](https://img.shields.io/badge/平台-Windows-0078D6?logo=windows)](https://github.com/maxzhao/NexusFlow/releases)
@@ -50,6 +50,28 @@ NexusFlow 是一款深度集成 Unreal Engine 编辑器的 AI 辅助开发工具
 
 基于 Python 脚本的能力包机制，覆盖蓝图、资产、灯光等多种操作类型，支持自定义扩展。
 
+### 🌐 全局 LLM 代理
+
+可为桌面主程序中的所有 LLM 通讯统一配置 HTTP / HTTPS / SOCKS4 / SOCKS5 代理。代理认证信息使用 NexusFlow 的加密密钥存储保存，且该代理只作用于 LLM 请求，不影响 UE / Bridge / MCP 等内部连接。
+
+### 🔌 面向 IDE Agent 的 MCP Server
+
+NexusFlow 0.2.0 在桌面主程序中内置 MCP 服务。Cursor、Claude Code 以及其他支持 MCP 的 IDE / Agent 可以连接 NexusFlow，读取 UE 上下文、搜索 Skill、加载指导知识、执行蓝图动作、搜索节点并复用蓝图模板。
+
+### 🧩 可选的 NexusFlow Skill
+
+如果你希望在支持 MCP 的 IDE Agent 中使用 NexusFlow，可以安装独立发布的 [NexusFlow Skill](https://github.com/maxzhao/nexusflow-skill)：
+
+```bash
+npx skills add maxzhao/nexusflow-skill
+```
+
+它会指导 Agent 按安全的 NexusFlow MCP 流程工作：检查连接、读取 UE 上下文、搜索 Skill、按需加载知识，然后执行动作。
+
+### 🧪 Widget Blueprint Skill MVP
+
+实验性的 Widget Skill 已可试用，可创建 UMG Widget Blueprint、读回 Widget Tree、修改控件属性、重写控件分支，并在可用时捕获真实预览截图。
+
 ## 📦 安装
 
 ### 系统要求
@@ -64,8 +86,9 @@ NexusFlow 是一款深度集成 Unreal Engine 编辑器的 AI 辅助开发工具
 
 1. **下载主程序** — 从 [Releases](https://github.com/maxzhao/NexusFlow/releases) 页面下载最新安装包
 2. **安装 UE 插件** — 从 [Fab.com](https://www.fab.com/) 购买并安装（支持 UE 5.6 和 5.7）
-3. **配置 AI 模型** — 在设置中填入你的 LLM API Key
-4. **开始使用** — 打开 UE 项目，点击悬浮球或使用快捷键唤起 AI 对话
+3. **配置 AI 模型** — 在设置中填入 LLM API Key，或使用 `${OPENAI_API_KEY}` 引用环境变量
+4. **可选：配置 LLM 代理** — 如网络环境需要，在设置 → LLM 代理中配置全局 HTTP/HTTPS/SOCKS 代理
+5. **开始使用** — 打开 UE 项目，点击悬浮球或使用快捷键唤起 AI 对话
 
 > 📖 详细安装步骤请参阅[安装指南](https://nexusflow-docs.pages.dev/zh/guide/installation)。
 
@@ -80,10 +103,10 @@ NexusFlow 是一款深度集成 Unreal Engine 编辑器的 AI 辅助开发工具
 | 阶段 | 版本 | 状态 |
 |------|------|------|
 | MVP | 0.1.0 | ✅ 已完成 |
-| **Beta** | **0.5.0** | **🔄 开发中** |
+| **Beta** | **0.2.0** | **✅ 当前版本** |
 | Release | 1.0.0 | 📋 规划中 |
 
-当前处于 **Beta 阶段**，核心功能已可用，正在持续完善用户体验。
+当前版本：**0.2.0 Beta** — 新增内置 MCP Server、面向 MCP Agent 的独立 NexusFlow Skill，蓝图 Skill 稳定性提升，并提供实验性的 Widget Blueprint Skill。
 
 ## ❓ 常见问题
 
@@ -91,13 +114,13 @@ NexusFlow 是一款深度集成 Unreal Engine 编辑器的 AI 辅助开发工具
 A: 需要。NexusFlow 需要调用 LLM API 来提供 AI 能力，请确保网络畅通。
 
 **Q: 支持哪些 LLM？**
-A: 内置支持 OpenAI、Anthropic (Claude)、Google Gemini、DeepSeek、智谱 GLM、MiniMax、通义千问 (Qwen) 和 Kimi (月之暗面)。还可以通过 Custom Provider 接入任何兼容 OpenAI/Anthropic/Gemini API 的服务。需要自备 API Key。
+A: 内置支持 OpenAI、Anthropic (Claude)、Google Gemini、DeepSeek、智谱 GLM、MiniMax、通义千问 (Qwen) 和 Kimi (月之暗面)。还可以通过 Custom Provider 接入任何兼容 OpenAI/Anthropic/Gemini API 的服务。需要自备 API Key，可直接填写，也可使用 `${OPENAI_API_KEY}` 这类环境变量引用。如网络环境需要代理，可在设置 → LLM 代理中配置全局 LLM 代理。
 
 **Q: 支持 macOS 吗？**
 A: 目前仅支持 Windows，macOS 支持计划在 Release 1.0 版本中提供。
 
 **Q: 会修改我的 UE 项目文件吗？**
-A: AI 对蓝图的操作基于 UE 原生的 Undo 系统 (FScopedTransaction)，所有修改都可以撤销。
+A: 蓝图操作会尽量使用 UE 原生 Undo 系统。对于破坏性操作或完整重写，NexusFlow 和 Agent 工作流会先要求确认。
 
 > 📖 更多问题？查看[常见问题](https://nexusflow-docs.pages.dev/zh/faq/)和[故障排除指南](https://nexusflow-docs.pages.dev/zh/faq/troubleshooting)。
 

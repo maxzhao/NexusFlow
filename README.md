@@ -6,7 +6,7 @@
 
 **AI-Powered Blueprint Development Assistant for Unreal Engine**
 
-Control UE Blueprints with natural language — understand, modify, and generate in one conversation.
+Control UE Blueprints and UMG Widgets with natural language — from the NexusFlow desktop app or any MCP-capable IDE.
 
 [![License](https://img.shields.io/badge/License-Proprietary%20Freeware-blue)](#license)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](https://github.com/maxzhao/NexusFlow/releases)
@@ -50,6 +50,28 @@ Built-in RAG semantic search engine — the AI automatically searches node templ
 
 Python-based capability packs covering Blueprints, assets, lighting, and more — with support for custom extensions.
 
+### 🌐 Global LLM Proxy
+
+Configure one HTTP/HTTPS/SOCKS4/SOCKS5 proxy for all LLM traffic from the desktop app. Proxy credentials are stored with NexusFlow's encrypted secret storage, and internal UE/Bridge/MCP connections are not routed through this proxy.
+
+### 🔌 MCP Server for IDE Agents
+
+NexusFlow 0.2.0 exposes its Unreal Engine automation capabilities through an MCP server built into the desktop app. Cursor, Claude Code, and other MCP-capable IDE agents can connect to NexusFlow to inspect UE context, search skills, load guided knowledge, execute Blueprint actions, search nodes, and reuse Blueprint templates.
+
+### 🧩 Optional NexusFlow Skill for Agents
+
+For MCP-capable IDE agents, install the separately published [NexusFlow Skill](https://github.com/maxzhao/nexusflow-skill):
+
+```bash
+npx skills add maxzhao/nexusflow-skill
+```
+
+It provides agent-facing guidance for safely using the NexusFlow MCP workflow: check connection, inspect UE context, search skills, load only the required guide/knowledge, then execute the action.
+
+### 🧪 Widget Blueprint Skill MVP
+
+The experimental Widget Skill can create UMG Widget Blueprints, read widget trees, patch widget properties, rewrite widget tree branches, and capture real preview screenshots when available.
+
 ## 📦 Installation
 
 ### System Requirements
@@ -64,8 +86,9 @@ Python-based capability packs covering Blueprints, assets, lighting, and more �
 
 1. **Download Desktop App** — Get the latest installer from [Releases](https://github.com/maxzhao/NexusFlow/releases)
 2. **Install UE Plugin** — Purchase and install from [Fab.com](https://www.fab.com/) (supports UE 5.6 and 5.7)
-3. **Configure AI Model** — Enter your LLM API Key in Settings
-4. **Start Using** — Open a UE project, click the floating ball or use the hotkey to start chatting
+3. **Configure AI Model** — Enter your LLM API Key in Settings, or reference one with `${OPENAI_API_KEY}`
+4. **Optional: Configure LLM Proxy** — In Settings → LLM Proxy, set a global HTTP/HTTPS/SOCKS proxy for LLM requests when your network requires it
+5. **Start Using** — Open a UE project, click the floating ball or use the hotkey to start chatting
 
 > 📖 For detailed installation steps, see the [Installation Guide](https://nexusflow-docs.pages.dev/en/guide/installation).
 
@@ -77,13 +100,13 @@ Python-based capability packs covering Blueprints, assets, lighting, and more �
 
 ## 📋 Version Status
 
-| Phase    | Version   | Status                |
-| -------- | --------- | --------------------- |
-| MVP      | 0.1.0     | ✅ Complete           |
-| **Beta** | **0.5.0** | **🔄 In Development** |
-| Release  | 1.0.0     | 📋 Planned            |
+| Phase | Version | Status |
+| ------ | ------- | ------ |
+| MVP | 0.1.0 | ✅ Complete |
+| **Beta** | **0.2.0** | **✅ Current** |
+| Release | 1.0.0 | 📋 Planned |
 
-Currently in **Beta** — core features are functional, and we're actively improving the user experience.
+Current version: **0.2.0 Beta** — now with embedded MCP server support, an optional standalone NexusFlow Skill for MCP-capable agents, improved Blueprint Skill reliability, and an experimental Widget Blueprint Skill.
 
 ## ❓ FAQ
 
@@ -91,13 +114,13 @@ Currently in **Beta** — core features are functional, and we're actively impro
 A: Yes. NexusFlow calls LLM APIs to provide AI capabilities. A stable internet connection is required.
 
 **Q: Which LLMs are supported?**
-A: Built-in support for OpenAI, Anthropic (Claude), Google Gemini, DeepSeek, Zhipu GLM, MiniMax, Qwen (Alibaba Cloud), and Kimi (Moonshot). You can also connect any OpenAI/Anthropic/Gemini-compatible API via Custom Provider. You need to provide your own API Key.
+A: Built-in support for OpenAI, Anthropic (Claude), Google Gemini, DeepSeek, Zhipu GLM, MiniMax, Qwen (Alibaba Cloud), and Kimi (Moonshot). You can also connect any OpenAI/Anthropic/Gemini-compatible API via Custom Provider. You need to provide your own API Key, either directly or as an environment variable reference such as `${OPENAI_API_KEY}`. If your network requires a proxy, configure a global LLM proxy in Settings → LLM Proxy.
 
 **Q: Does it support macOS?**
 A: Currently Windows only. macOS support is planned for the Release 1.0 version.
 
 **Q: Will it modify my UE project files?**
-A: All Blueprint operations use UE's native Undo system (FScopedTransaction). Every change can be undone with Ctrl+Z.
+A: Blueprint operations use UE's native Undo system where supported. For destructive or full-rewrite actions, NexusFlow and the agent workflow ask for confirmation first.
 
 > 📖 More questions? Check the [FAQ](https://nexusflow-docs.pages.dev/en/faq/) and [Troubleshooting Guide](https://nexusflow-docs.pages.dev/en/faq/troubleshooting).
 
